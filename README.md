@@ -1,7 +1,7 @@
 This is the reference code for [CryptoNote](https://cryptonote.org) cryptocurrency protocol.
 
 
-## Building Kredit 
+## Building KreditX 
 
 ### On *nix
 
