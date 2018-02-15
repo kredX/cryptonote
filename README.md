@@ -15,6 +15,8 @@ sudo apt-get install doxygen
 sudo apt-get install libboost-all-dev
 
 git clone  https://github.com/kredX/kredit.git
+=======
+## Building KreditX 
 
 cd kredit
 cmake .. && make
