@@ -1,9 +1,25 @@
-This is the reference code for [CryptoNote](https://cryptonote.org) cryptocurrency protocol.
+This is the reference code for [kreditX](https://github.com/kredX/kredit) cryptocurrency protocol.
 
 
-## Building KreditX 
+## Building Kredit 
 
 ### On *nix
+
+### On Ubuntu
+
+Install below software
+
+sudo apt-get install cmake
+sudo apt-get install libpthread-stubs0-dev
+sudo apt-get install doxygen
+sudo apt-get install libboost-all-dev
+
+git clone  https://github.com/kredX/kredit.git
+=======
+## Building KreditX 
+
+cd kredit
+cmake .. && make
 
 Dependencies: GCC 4.7.3 or later, CMake 2.8.6 or later, and Boost 1.55.
 
