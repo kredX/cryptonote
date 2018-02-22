@@ -41,7 +41,7 @@ const uint64_t MINIMUM_FEE                                   = 100000;
 const uint64_t DEFAULT_DUST_THRESHOLD                        = MINIMUM_FEE;
 
 //TODO Define preferred block's target time
-const uint64_t DIFFICULTY_TARGET                             = 120; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 600; // seconds
 const uint64_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY             = 24 * 60 * 60 / DIFFICULTY_TARGET;
 //TODO There are options to tune CryptoNote's difficulty retargeting function.
 //TODO We recommend not to change it.
@@ -87,9 +87,9 @@ const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  200;    //by def
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
 //TODO This port will be used by the daemon to establish connections with p2p network
-const int      P2P_DEFAULT_PORT                              = 17236;
+const int      P2P_DEFAULT_PORT                              = 17239;
 //TODO This port will be used by the daemon to interact with simlewallet
-const int      RPC_DEFAULT_PORT                              = 18236;
+const int      RPC_DEFAULT_PORT                              = 18239;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
 const size_t   P2P_LOCAL_GRAY_PEERLIST_LIMIT                 =  5000;
@@ -108,8 +108,14 @@ const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "8f80f9a5a434a9f1
 
 //TODO Add here your network seed nodes
 const std::initializer_list<const char*> SEED_NODES = {
-  "74.208.250.204:17236",
-  "74.208.250.7:17236",
+  "74.208.250.204:17239",
+  "74.208.250.7:17239",
+  "74.208.229.231:17239",
+  "128.199.51.88.7:17239",
+  "188.166.89.216:17239",
+  "159.65.194.36:17239",
+  "188.166.23.241:17239",
+  "159.65.194.21:17239",
 };
 
 struct CheckpointData {
@@ -125,6 +131,19 @@ __attribute__((unused))
 // {<block height>, "<block hash>"},
 const std::initializer_list<CheckpointData> CHECKPOINTS = {
   //{ 10000, "84b6345731e2702cdaadc6ce5e5238c4ca5ecf48e3447136b2ed829b8a95f3ad" },
+  { 500, "e0f7296eb5271ddc6b35f3dcf880e04c7a0247a80b862565f36bcf0dd38e2dc8" },
+  { 1000, "a6700f42a8e3f797e84fa86c994c7d951ef3e386302b11eb189526c7d1946bc5" },
+  { 1500, "88311d710f75b1aa12a2952f74df5127784763861d063443e6dcb75dadd55d93" },
+  { 2000, "872cabecfd2446371ca5429cc2be579d31104fd452d02cf49f673d451abdf134" },
+  { 2500, "fecc939327f9085eed22ea04951068b57ca809e7e58e583c88781f710a407e3f" },
+  { 3000, "dffc8bf3907abac82a85d60dd4c18231c32a3bee9b8bc05f340c59f9d1517f05" },
+  { 3500, "625a3ffd1dd5c0599dfc5cec3548b95b5ca9ddfd7509f7cc87095a4af9711478" },
+  { 4000, "7d0faf2f6cb84d8bde6cde7cb45a812eac658499f3f578fb94cd8ac694bea831" },
+  { 4500, "4b43cdb275254d0d90fcf94a3dcd4f863b4de4e5e1f67e47f0b0206da8b1cf9c" },
+  { 5000, "1789f9a2eaf10b81a6360889cce91b3f1a45bdedb01d1c3cf85d5ced85bcfc23" },
+  { 5500, "7877f8e1b0741338d586c800475ac37660a3871b581d73f7d66d1e6bad0663c4" },
+  { 6000, "69d647487e00c490fac1f7242ccb01d9bd1f3678e333e81d3931ec0369efbb27" },
+  { 6500, "12a3445bddb68ab2c7da9b1ce2a0adfdc3cc79abfb41414b766136519efafd20" }, 
 };
 } // CryptoNote
 
